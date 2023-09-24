@@ -58,7 +58,6 @@ with app.app_context():
     db.create_all()
     
     cart1 = Cart()
-    cart1.set_products([get_product(1)['task']['id'], get_product(2)['task']['id']])
 
     db.session.add(cart1)
     db.session.commit()
