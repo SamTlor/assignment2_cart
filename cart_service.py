@@ -7,17 +7,17 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 #product endpoint getters
 def get_all_products():
-    return requests.get('http://127.0.0.1:5000/products').json()
+    return requests.get('https://product-etg3.onrender.com/products').json()
 
 def get_product(product_id):
-    return requests.get(f'http://127.0.0.1:5000/products/{product_id}').json()
+    return requests.get(f'https://product-etg3.onrender.com/products/{product_id}').json()
 
 def create_product(name):
     new_product = {"name": name}
-    return requests.post('http://127.0.0.1:5000/products', json=new_product).json()
+    return requests.post('https://product-etg3.onrender.com/products', json=new_product).json()
 
 def update_product(product_id, quantity):
-    return requests.post(f'http://127.0.0.1:5000/products/update/{product_id}', 
+    return requests.post(f'https://product-etg3.onrender.com/products/update/{product_id}', 
                          json = {"quantity" : quantity})
 
 
